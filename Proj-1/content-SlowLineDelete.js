@@ -10,10 +10,14 @@ var backgroundImage,imageOverlay;
 var width, height;
 
 function setup(){
+    frameRate(10);
+
     width = $(window).width();
     height = $(window).height();
-    MAX_DIST = (width*height)/DEF_DIST_MODIFIER;
+    // MAX_DIST = (width*height)/DEF_DIST_MODIFIER;
     STAR_COUNT = (width * height)/DEF_STAR_DENSITY_MODIFIER;
+    MAX_DIST = 150;
+
     createCanvas(width, height);
 
     stars = [];
