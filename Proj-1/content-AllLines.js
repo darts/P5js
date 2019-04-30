@@ -1,6 +1,8 @@
-var STAR_COUNT = 100; //default value
-var MAX_DIST = 150; //also default value
-var DEF_DENSITY_MODIFIER = 12000; //lower number = more stars
+var STAR_COUNT;
+var MAX_DIST; 
+var DEF_STAR_DENSITY_MODIFIER = 12000; //lower number = more stars
+var DEF_DIST_MODIFIER = 8000; //lower number = longer distance
+
 var MAX_STAR_SIZE = 3;
 
 var stars; //xSpeed, ySpeed, xPos, yPos, size
@@ -11,7 +13,8 @@ var width, height;
 function setup(){
     width = $(window).width();
     height = $(window).height();
-    STAR_COUNT = (width * height)/DEF_DENSITY_MODIFIER;
+    MAX_DIST = (width*height)/DEF_DIST_MODIFIER;
+    STAR_COUNT = (width * height)/DEF_STAR_DENSITY_MODIFIER;
     createCanvas(width, height);
 
     background(0);
